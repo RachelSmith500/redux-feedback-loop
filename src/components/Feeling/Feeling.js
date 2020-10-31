@@ -16,8 +16,8 @@ class Feeling extends Component{
             <>
             <p>How are you feeling today</p>
             <h4>feeling?</h4>
-            <input onChange={this.addFeelings}type= "number" placeholder="enter a number"/>
-            <button onClick={(this.sendFeelings)}>Next</button>
+            <input onChange={(event) => this.setState({feel:event.target.value})} type="number" placeholder="enter a number"/>
+            <button onClick={this.sendFeelings}>Next</button>
             </>
         )
         
