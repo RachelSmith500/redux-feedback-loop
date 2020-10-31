@@ -9,8 +9,8 @@ import { HashRouter as Router, Route, Link } from 'react-router-dom';
 class App extends Component {
 
   render() {
-
     return (
+     
       <Router>
           <div className="App">
               <header className="App-header">
@@ -18,8 +18,10 @@ class App extends Component {
                 <h4><i>Don't forget it!</i></h4>
               </header>
             <br/>
+        
           </div>
           <Route exact path="/feeling" component={Feeling}/>
+          
       </Router>
     );
   }
