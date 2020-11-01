@@ -14,12 +14,12 @@ class Review extends Component {
     render (){
         return(
             <>
-            <div>Review Your Feedback:</div>
-            <div>Feelings:{this.props.reduxState.howWeDoingReducer.feel}</div>
-            <div>Understanding:{this.props.reduxState.howWeDoingReducer.understanding}</div>
-            <div>Support:{this.props.reduxState.howWeDoingReducer.support}</div>
-            <div>Comments:{this.props.reduxState.howWeDoingReducer.comments}</div>
-            <button onClick={this.sendFeedback}>Submit</button>
+                <div>Review Your Feedback:</div>
+                <div>Feelings:{this.props.reduxState.howWeDoingReducer.feel}</div>
+                <div>Understanding:{this.props.reduxState.howWeDoingReducer.understanding}</div>
+                <div>Support:{this.props.reduxState.howWeDoingReducer.support}</div>
+                <div>Comments:{this.props.reduxState.howWeDoingReducer.comments}</div>
+                <button onClick={this.sendFeedback}>Submit</button>
             </>
         )
     }

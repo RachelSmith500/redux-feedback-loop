@@ -9,7 +9,7 @@ class Comments extends Component{
     
     addComments =(event) => {
         this.state.dispatch({type:'ADD_COMMENTS', payload: this.state.comments})
-        this.props.history.push('/comments')
+        this.props.history.push('/review')
     }
     render(){
         return(
