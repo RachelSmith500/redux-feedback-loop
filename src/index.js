@@ -8,11 +8,11 @@ import { createStore, combineReducers, applyMiddleware } from 'redux';
 import { Provider } from 'react-redux'; 
 import logger from 'redux-logger';
 
-const  howWeDoingReducer = (state = {}, action) => {
+const howWeDoingReducer = (state = {}, action) => {
     if (action.type ==='ADD_FEELINGS'){
         return{
             ...state, 
-            feel: Number(action.payload),
+            feeling: Number(action.payload),
         }
     }
     if (action.type === 'ADD_UNDERSTANDING'){
@@ -24,13 +24,13 @@ const  howWeDoingReducer = (state = {}, action) => {
     if (action.type ==='ADD_SUPPORT'){
         return{
             ...state, 
-            feel: Number(action.payload),
+            support: Number(action.payload),
         }
     }
     if (action.type ==='ADD_COMMENTS'){
         return{
             ...state, 
-            feel: Number(action.payload),
+            comments: action.payload,
         }
     } if (action.type === 'ADD_THANKYOU'){
         return state = {}
