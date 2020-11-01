@@ -14,7 +14,13 @@ const  howWeDoingReducer = (state = {}, action) => {
     }
     if (action.type === 'ADD_UNDERSTANDING'){
         return {...state, understanding: Number(action.payload)}
-    } return state 
+    } 
+    if (action.type ==='ADD_SUPPORT'){
+        return{...state, feel: Number(action.payload)}
+    }
+    if (action.type ==='ADD_COMMENTS'){
+        return{...state, feel: Number(action.payload)}
+    }return state;
    
 }
 
