@@ -1,11 +1,13 @@
 import React, { Component } from 'react';
-import { connect } from 'react-redux';
+// import { connect } from 'react-redux';
 import './App.css';
 import Feeling from './../Feeling/Feeling';
 import Understanding from './../Understanding/Understanding';
 import Support from './../Support/Support';
 import Comments from './../Comments/Comments';
 import Review from './../Review/Review';
+import ThankYou from './../ThankYou/ThankYou';
+
 
 import { HashRouter as Router, Route, Link } from 'react-router-dom';
 
@@ -28,6 +30,7 @@ class App extends Component {
               <Route path="/support" component={Support}/>
               <Route path="/comments" component={Comments}/>
               <Route path="/review" component={Review}/>
+              <Route path="/thankyou" component={ThankYou}/>
           </div>
       </Router>
     );
