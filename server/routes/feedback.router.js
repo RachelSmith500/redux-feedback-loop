@@ -6,7 +6,7 @@ const { query } = require('../modules/pool');
 router.post('/', (req, res) => {
     let query =`INSERT INTO feedback (feeling, understanding, support, comments)
     VALUES ($1, $2, $3, $4)`
-    pool.query(query, [req.body.feel, req.body.understanding, req.body.support, req.body.comments])
+    pool.query(query, [req.body.feeling, req.body.understanding, req.body.support, req.body.comments])
     .then((result) => {
         res.sendStatus(201);
     }).catch(error => {

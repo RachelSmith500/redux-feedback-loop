@@ -10,17 +10,32 @@ import logger from 'redux-logger';
 
 const  howWeDoingReducer = (state = {}, action) => {
     if (action.type ==='ADD_FEELINGS'){
-        return{...state, feel: Number(action.payload)}
+        return{
+            ...state, 
+            feel: Number(action.payload),
+        }
     }
     if (action.type === 'ADD_UNDERSTANDING'){
-        return {...state, understanding: Number(action.payload)}
+        return {
+            ...state, 
+            understanding: Number(action.payload),
+        }
     } 
     if (action.type ==='ADD_SUPPORT'){
-        return{...state, feel: Number(action.payload)}
+        return{
+            ...state, 
+            feel: Number(action.payload),
+        }
     }
     if (action.type ==='ADD_COMMENTS'){
-        return{...state, feel: Number(action.payload)}
-    }return state;
+        return{
+            ...state, 
+            feel: Number(action.payload),
+        }
+    } if (action.type === 'ADD_THANKYOU'){
+        return state = {}
+
+    }   return state;
    
 }
 
