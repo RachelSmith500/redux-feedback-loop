@@ -8,15 +8,19 @@ class Feeling extends Component{
     }
     
     addFeelings =(event) => {
+        if(this.state.feeling !== 0){
         this.state.dispatch({type:'ADD_FEELINGS', payload: this.state.feel})
         this.props.history.push('/understanding')
+        }else{
+            alert('Please select a number between 1 and 5')
+        }
     }
     render(){
         return(
             <>
             <p>How are you feeling today</p>
             <h4>feeling?</h4>
-            <input onChange={(event) => this.setState({feel:event.target.value})} type="number" placeholder="enter a number"/>
+            <input type="number" onChange={(event) => this.setState({feel:event.target.value})}/>
             <button onClick={this.sendFeelings}>Next</button>
             </>
         )

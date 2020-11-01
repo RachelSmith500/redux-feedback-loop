@@ -16,7 +16,7 @@ class Comments extends Component{
             <>
             <p>Would you like to leave any comments?</p>
             <h4>comments?</h4>
-            <input onChange={(event) => this.setState({comments:event.target.value})} type="text" placeholder="enter a number"/>
+            <input type="text" onChange={(event) => this.setState({comments:event.target.value})}/>
             <button onClick={this.addComments}>Next</button>
             </>
         )

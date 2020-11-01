@@ -9,8 +9,12 @@ class Support extends Component{
     }
 
     addSupport = (event) => {
+        if(this.state.support !== 0){
         this.props.dispatch({type:'ADD_SUPPORT', payload:this.state.support})
         this.props.history.push('/comments')
+        }else {
+            alert('Please select a number between 1 and 5')
+        }
     }
     render(){
         return(

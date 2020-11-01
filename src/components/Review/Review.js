@@ -4,9 +4,10 @@ import axios from 'axios';
 
 class Review extends Component {
     sendFeedback = () => {
+        console.log('post worked, info entered')
         axios.post('/api/feedback', this.props.reduxState.howWeDoingReducer)
             .then(response => {
-                this.props.history.push('/completed');
+                this.props.history.push('/thankyou');
             }).catch(error => {
                 console.log('error in POST', error)
             })
