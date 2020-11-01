@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
 
-class Feeling extends Component{
+class Comments extends Component{
 
     state = {
         comments: ""
@@ -30,4 +30,4 @@ const mapStateToProps = (reduxState) => {
     }
   }
   
-  export default connect(mapStateToProps)(Feeling);
+  export default connect(mapStateToProps)(Comments);
