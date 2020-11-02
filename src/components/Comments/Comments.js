@@ -11,6 +11,10 @@ class Comments extends Component{
         this.props.dispatch({type:'ADD_COMMENTS', payload: this.state.comments})
         this.props.history.push('/review')
     }
+
+    goBack = (event) => {
+        this.props.history.push('/support')
+    }
     render(){
         return(
             <>
@@ -18,6 +22,7 @@ class Comments extends Component{
             <h4>comments?</h4>
             <input type="text" onChange={(event) => this.setState({comments:event.target.value})}/>
             <button onClick={this.addComments}>Next</button>
+            <button onClick={this.goBack}>Back</button>
             </>
         )
         

@@ -15,6 +15,10 @@ class Understanding extends Component {
         }
     }
 
+    goBack = (event) => {
+        this.props.history.push('/feeling')
+    }
+
     render(){
         return(
             <div>
@@ -22,6 +26,7 @@ class Understanding extends Component {
                 <p>Understanding?</p>
                 <input type="number" onChange={(event) => this.setState({understanding:event.target.value})}/>
                 <button onClick={this.addUnderstanding}>Next</button>
+                <button onClick={this.goBack}>Back</button>
             </div>
 
         )

@@ -16,6 +16,11 @@ class Support extends Component{
             alert('Please select a number between 1 and 5')
         }
     }
+
+    goBack = (event) => {
+        this.props.history.push('/understanding')
+    }
+    
     render(){
         return(
             <div>
@@ -23,6 +28,7 @@ class Support extends Component{
                 <p>Support?</p>
                 <input type="number" onChange={(event) => this.setState({support:event.target.value})}/>
                 <button onClick={this.addSupport}>Next</button>
+                <button onClick={this.goBack}>Back</button>
             </div>
 
         )

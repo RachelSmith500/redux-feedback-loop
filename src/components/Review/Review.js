@@ -12,6 +12,12 @@ class Review extends Component {
                 console.log('error in POST', error);
             })
     }
+    goBack = (event) => {
+        this.props.history.push('/comments')
+    }
+    goBackToBeginning = (event) => {
+        this.props.history.push('/feeling')
+    }
     render (){
         return(
             <>
@@ -21,6 +27,9 @@ class Review extends Component {
                 <div>Support:{this.props.reduxState.howWeDoingReducer.support}</div>
                 <div>Comments:{this.props.reduxState.howWeDoingReducer.comments}</div>
                 <button onClick={this.sendFeedback}>Submit</button>
+                <button onClick={this.goBack}>Back</button>
+                <button onClick={this.goBackToBeginning}>Whoops, I need to start over!</button>
+
             </>
         )
     }
