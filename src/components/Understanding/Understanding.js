@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
 
+import ButtonGroup from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
+
 class Understanding extends Component {
     state = {
         understanding: 0
@@ -22,11 +25,15 @@ class Understanding extends Component {
     render(){
         return(
             <div>
-                <p>How well are you understanding the content?</p>
-                <p>Understanding?</p>
+                <h2>How well are you understanding the content?</h2>
+                <h4>Understanding?</h4>
                 <input type="number" onChange={(event) => this.setState({understanding:event.target.value})}/>
-                <button onClick={this.addUnderstanding}>Next</button>
-                <button onClick={this.goBack}>Back</button>
+                {/* <button onClick={this.addUnderstanding}>Next</button>
+                <button onClick={this.goBack}>Back</button> */}
+                <ButtonGroup aria-label="small outlined button group" color="secondary" size="small">
+                    <Button onClick={this.addUnderstanding}>Next</Button>
+                    <Button onClick={this.goBack}>Back</Button>
+                </ButtonGroup>
             </div>
 
         )

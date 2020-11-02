@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
 
+
+//import Material UI
+import Button from '@material-ui/core/Button';
+
+
 class Feeling extends Component{
 
     state = {
@@ -18,10 +23,10 @@ class Feeling extends Component{
     render(){
         return(
             <>
-            <p>How are you feeling today</p>
+            <h2>How are you feeling today?</h2>
             <h4>feeling?</h4>
             <input type="number" onChange={(event) => this.setState({feeling:event.target.value})}/>
-            <button onClick={this.addFeelings}>Next</button>
+            <Button size="small" color="secondary" onClick={this.addFeelings}>Next</Button>
             </>
         )
         

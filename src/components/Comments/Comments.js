@@ -1,6 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
 
+import ButtonGroup from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
+
 class Comments extends Component{
 
     state = {
@@ -18,11 +21,13 @@ class Comments extends Component{
     render(){
         return(
             <>
-            <p>Would you like to leave any comments?</p>
+            <h2>Would you like to leave any comments?</h2>
             <h4>comments?</h4>
             <input type="text" onChange={(event) => this.setState({comments:event.target.value})}/>
-            <button onClick={this.addComments}>Next</button>
-            <button onClick={this.goBack}>Back</button>
+            <ButtonGroup aria-label="small outlined button group" color="secondary" size="small">
+                <Button onClick={this.addComments}>Next</Button>
+                <Button onClick={this.goBack}>Back</Button>
+            </ButtonGroup>
             </>
         )
         

@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux'; 
-
+import ButtonGroup from '@material-ui/core/Button';
+import Button from '@material-ui/core/Button';
 
 class Support extends Component{
 
     state = {
-        support: ''
+        support: 0
     }
 
     addSupport = (event) => {
@@ -20,15 +21,17 @@ class Support extends Component{
     goBack = (event) => {
         this.props.history.push('/understanding')
     }
-    
+
     render(){
         return(
             <div>
-                <p>How well are you being supported?</p>
-                <p>Support?</p>
+                <h2>How well are you being supported?</h2>
+                <h4>Support?</h4>
                 <input type="number" onChange={(event) => this.setState({support:event.target.value})}/>
-                <button onClick={this.addSupport}>Next</button>
-                <button onClick={this.goBack}>Back</button>
+                <ButtonGroup aria-label="small outlined button group" color="secondary" size="small">
+                    <Button onClick={this.addSupport}>Next</Button>
+                    <Button onClick={this.goBack}>Back</Button>
+                </ButtonGroup>
             </div>
 
         )
