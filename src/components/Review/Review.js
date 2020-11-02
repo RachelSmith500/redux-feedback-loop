@@ -6,6 +6,7 @@ import ButtonGroup from '@material-ui/core/Button';
 import Button from '@material-ui/core/Button';
 
 class Review extends Component {
+    //sends our data to the database to be stored via an axios post route
     sendFeedback = () => {
         console.log('post worked, info entered')
         axios.post('/api/feedback', this.props.reduxState.howWeDoingReducer)
@@ -18,12 +19,14 @@ class Review extends Component {
     goBack = (event) => {
         this.props.history.push('/comments')
     }
+    //this allows users to go all the way back to the start of the survey 
     goBackToBeginning = (event) => {
         this.props.history.push('/feeling')
     }
     render (){
         return(
             <>
+            {/* displays the data that we have pushed to the reducer on the DOM */}
                 <h2>Review Your Feedback:</h2>
                 <h2>Feelings:{this.props.reduxState.howWeDoingReducer.feeling}</h2>
                 <h2>Understanding:{this.props.reduxState.howWeDoingReducer.understanding}</h2>

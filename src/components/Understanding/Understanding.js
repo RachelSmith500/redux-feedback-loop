@@ -8,7 +8,7 @@ class Understanding extends Component {
     state = {
         understanding: 0
     }
-
+    
     addUnderstanding = (event) =>{
         if(this.state.understanding !== 0) {
         this.props.dispatch({type:'ADD_UNDERSTANDING', payload:this.state.understanding})
@@ -17,7 +17,7 @@ class Understanding extends Component {
             alert('Please select a number between 1 and 5')
         }
     }
-
+// below is my back button it allows the user to go back and change their answers 
     goBack = (event) => {
         this.props.history.push('/feeling')
     }
@@ -28,8 +28,6 @@ class Understanding extends Component {
                 <h2>How well are you understanding the content?</h2>
                 <h4>Understanding?</h4>
                 <input type="number" onChange={(event) => this.setState({understanding:event.target.value})}/>
-                {/* <button onClick={this.addUnderstanding}>Next</button>
-                <button onClick={this.goBack}>Back</button> */}
                 <ButtonGroup aria-label="small outlined button group" color="secondary" size="small">
                     <Button onClick={this.addUnderstanding}>Next</Button>
                     <Button onClick={this.goBack}>Back</Button>
